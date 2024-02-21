@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Video troubleshooting</title>
+    <base href="./">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0
+        }
+
+        video {
+            width: 100vw;
+            height: 50vh;
+            object-fit: contain
+        }
+
+        button {
+            height: 50px;
+            width: 100px;
+        }
+
+        .row {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .col {
+            display: flex;
+            flex: 33%;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <video id="video" autoplay="" loop="" muted src="video1.mp4" poster="blank.png"></video>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button type="button" id="button1">Video 1</button>
+        </div>
+        <div class="col">
+            <button type="button" id="button2">Video 2</button>
+        </div>
+        <div class="col">
+            <button type="button" id="button3">Video 3</button>
+        </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#button1").click(function () {
+                $("#video").attr("src", "video1.mp4");
+            });
+
+            $("#button2").click(function () {
+                $("#video").attr("src", "video2.mp4");
+            });
+
+            $("#button3").click(function () {
+                $("#video").attr("src", "video3.mp4");
+            });
+        });
+    </script>
+</body>
+</html>
